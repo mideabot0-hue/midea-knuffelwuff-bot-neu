@@ -1,0 +1,19 @@
+KNUFFELWUFF-UPDATE FÜR DEN BESTEHENDEN BOT
+==========================================
+
+1. Beende den laufenden Bot mit Strg+C.
+2. Kopiere alle Dateien aus diesem ZIP in deinen vorhandenen Ordner:
+   midea-stock-bot
+3. Windows fragt, ob vorhandene Dateien ersetzt werden sollen.
+   Klicke auf "Dateien im Ziel ersetzen".
+4. Lösche NICHT deine Dateien .env und state.json.
+5. Doppelklicke auf:
+   7_einmal_pruefen_ohne_mail_windows.bat
+6. Beim ersten Lauf wird der aktuelle Knuffelwuff-Bestand gespeichert.
+   Dabei wird noch keine Bestands-E-Mail versendet.
+7. Teste die E-Mail mit:
+   6_knuffelwuff_test_windows.bat
+8. Starte den Bot anschließend wieder mit:
+   3_bot_starten_windows.bat
+
+Das Intervall ist auf 15 Minuten eingestellt.

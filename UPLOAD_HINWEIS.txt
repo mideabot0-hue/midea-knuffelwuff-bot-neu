@@ -1,0 +1,13 @@
+WICHTIG FUER GITHUB
+===================
+
+1. Diesen Ordner "midea-stock-bot" öffnen.
+2. ALLE darin enthaltenen Dateien und Ordner markieren, auch den Ordner ".github".
+3. Die markierten Inhalte in das Upload-Feld des LEEREN GitHub-Repositorys ziehen.
+4. NICHT den übergeordneten Ordner "midea-stock-bot" als Ganzes hochladen.
+5. Nach dem Upload muss GitHub im Hauptverzeichnis den Ordner ".github" anzeigen.
+6. Unter .github/workflows müssen diese Dateien liegen:
+   - check-stock.yml
+   - email-test.yml
+   - keepalive.yml
+7. Niemals die Datei .env oder ein Gmail-Passwort hochladen.

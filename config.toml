@@ -1,0 +1,80 @@
+[settings]
+check_interval_minutes = 15
+timeout_seconds = 35
+seconds_between_checks = 4
+catalog_seconds_between_pages = 1.5
+# 0 = nur bei Wechsel von nicht verfügbar zu verfügbar.
+# 24 = zusätzlich höchstens einmal pro 24 Stunden erinnern, solange verfügbar.
+notification_cooldown_hours = 24
+
+[[products]]
+name = "Midea PortaSplit 12.000 BTU"
+retailer = "OBI"
+url = "https://www.obi.de/p/8620890/midea-mobile-split-klimaanlage-portasplit"
+enabled = true
+available_phrases = ["Online verfügbar", "Lieferung nach Hause", "In den Warenkorb"]
+unavailable_phrases = ["Online nicht verfügbar", "Derzeit nicht verfügbar"]
+buy_selectors = ["button:has-text('In den Warenkorb')", "button:has-text('Jetzt kaufen')"]
+availability_selectors = ["main", "[data-testid*='availability']"]
+
+[[products]]
+name = "Midea PortaSplit 12.000 BTU"
+retailer = "toom"
+url = "https://toom.de/p/mobiles-klimageraet-portasplit-12000-btuh/9350668"
+enabled = true
+available_phrases = ["Online verfügbar", "Lieferbar", "In den Warenkorb"]
+unavailable_phrases = ["Online nicht verfügbar", "Nicht lieferbar", "Ausverkauft"]
+buy_selectors = ["button:has-text('In den Warenkorb')", "button:has-text('Reservieren')"]
+availability_selectors = ["main", "[class*='availability']"]
+
+[[products]]
+name = "Midea PortaSplit Cool 8.000 BTU"
+retailer = "Lidl"
+url = "https://www.lidl.de/p/midea-porta-split-cool/p100407988"
+enabled = true
+available_phrases = ["Lieferbar", "In den Warenkorb", "Jetzt bestellen"]
+unavailable_phrases = ["Ausverkauft", "Online ausverkauft", "Nicht verfügbar"]
+buy_selectors = ["button:has-text('In den Warenkorb')", "button:has-text('Jetzt bestellen')"]
+availability_selectors = ["main", "[data-testid*='availability']"]
+
+[[products]]
+name = "Midea PortaSplit 12.000 BTU"
+retailer = "Amazon"
+url = "https://www.amazon.de/dp/B0D3PP64JS"
+enabled = true
+available_phrases = ["Auf Lager", "Gewöhnlich versandfertig", "In den Einkaufswagen"]
+unavailable_phrases = ["Derzeit nicht verfügbar", "Momentan nicht verfügbar"]
+buy_selectors = ["#add-to-cart-button", "#buy-now-button"]
+availability_selectors = ["#availability", "#desktop_buybox", "#buybox"]
+
+# Optional: kleinere Cool-Variante auch bei Amazon überwachen.
+[[products]]
+name = "Midea PortaSplit Cool 8.000 BTU"
+retailer = "Amazon"
+url = "https://www.amazon.de/dp/B0GXDWTFR5"
+enabled = false
+available_phrases = ["Auf Lager", "Gewöhnlich versandfertig", "In den Einkaufswagen"]
+unavailable_phrases = ["Derzeit nicht verfügbar", "Momentan nicht verfügbar"]
+buy_selectors = ["#add-to-cart-button", "#buy-now-button"]
+availability_selectors = ["#availability", "#desktop_buybox", "#buybox"]
+
+
+# Knuffelwuff: vollständige Sortimentsüberwachung über die Hauptkategorien.
+# Beim ersten Lauf wird nur ein Ausgangsbestand gespeichert. Danach kommen
+# E-Mails bei neuen lieferbaren Artikeln und bei wieder lieferbaren Artikeln.
+[[catalogs]]
+name = "Knuffelwuff Gesamtsortiment"
+retailer = "Knuffelwuff"
+enabled = true
+max_pages_per_category = 5
+urls = [
+  "https://www.knuffelwuff.de/Schlafplatz",
+  "https://www.knuffelwuff.de/Reise-Transport",
+  "https://www.knuffelwuff.de/Hundefutter",
+  "https://www.knuffelwuff.de/Bekleidung",
+  "https://www.knuffelwuff.de/Leinen-Halsbaender",
+  "https://www.knuffelwuff.de/Spielzeug",
+  "https://www.knuffelwuff.de/Outlet",
+]
+available_phrases = ["Sofort verfügbar", "Sofort lieferbar", "Auf Lager", "Lieferbar"]
+unavailable_phrases = ["Nicht verfügbar", "Derzeit nicht verfügbar", "Nicht lieferbar", "Ausverkauft"]

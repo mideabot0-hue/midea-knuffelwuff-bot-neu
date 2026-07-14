@@ -1,0 +1,11 @@
+services:
+  portasplit-bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./config.toml:/app/config.toml:ro
+      - ./data:/app/data
+    environment:
+      BOT_STATE: /app/data/state.json
+    command: ["python", "bot.py"]
